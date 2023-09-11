@@ -1,0 +1,24 @@
+.breadCrumbs {
+    margin-top: 4.166vw;
+}
+
+.bcLinks {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+
+    text-decoration: none;
+    color: #8C8C8C;
+}
+
+.bcLinks:last-child {
+    color: #FF8EB4;
+}
+
+.bcSpaces {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+
+    color: #8C8C8C;
+}

@@ -1,0 +1,48 @@
+.goUpButton {
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    right: 9.375vw;
+    background-color: #FFB5C6;
+
+    color: white;
+    border: 0;
+    border-radius: 50%;
+
+    position: absolute;
+
+    --go-up-button-animation-bottom: 5px;
+    --go-up-button-animation-scale: 0.5;
+}
+
+.goUpButton::after {
+    content: '';
+    width: 24px;
+    height: 15px;
+    left: 50%;
+    top: 50%;
+
+    background-image: url("../../assets/Up.svg");
+    transform: translate(-50%, -60%);
+
+    position: absolute;
+}
+
+.goUpButton::before {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 42px;
+    bottom: var(--go-up-button-animation-bottom);
+    transform: scale(var(--go-up-button-animation-scale));
+
+    right: 12px;
+    background-image: url("../../assets/PrevBottom.svg");
+
+    transition: bottom 0.2s linear, transform 0.2s linear;
+}
+
+.goUpButton:hover {
+    --go-up-button-animation-bottom: -30px;
+    --go-up-button-animation-scale: 1.3;
+}

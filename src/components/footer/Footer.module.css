@@ -1,0 +1,124 @@
+.footer {
+    background-image:   url("../../assets/footer/footerBackground.png"),
+                        url("../../assets/header/Logo.svg");
+    background-position: top center, 17.36vw 3.263vw;
+    background-size: 100% calc(100% + (((100vw - 744px) * 0.04597) * 1)), 4.791vw 2.5vw;
+    background-repeat: no-repeat;
+    height: 25.69vw;
+    margin-top: 60px;
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column;
+    max-width: 771px;
+    top: 6.527vw;
+    left: calc((100vw - 704px) * 0.6154);
+
+    position: relative;
+}
+
+.footerGeneralContent {
+    display: flex;
+}
+
+.footerTitle {
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+
+    cursor: default;
+}
+
+.footerText {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13px;
+    color: #FFFFFF;
+
+    margin-top: 14px;
+    text-decoration: none;
+}
+
+/* Footer Nav */
+
+.footerNav {
+    display: flex;
+    flex-direction: column;
+    width: 194px;
+}
+
+/* Footer Contacts */
+
+.footerContacts {
+    display: grid;
+    row-gap: 7px;
+    grid-template-columns: repeat(2, minmax(166px, 194px));
+    grid-template-rows: 103px 78px;
+    grid-template-areas: 'first second'
+                         'third third';
+}
+
+.footerContactsNumbers {
+    display: flex;
+    flex-direction: column;
+    grid-area: first;
+
+    width: 100%;
+    max-width: 194px;
+}
+
+.footerContactsAddresses {
+    display: flex;
+    flex-direction: column;
+    grid-area: second;
+}
+
+.footerContactsSearch {
+    grid-area: third;
+    margin-top: 34px;
+}
+
+/* Footer Socials */
+
+.footerSocials {
+    display: flex;
+    flex-direction: column;
+    width: 195px;
+}
+
+.footerSocial {
+    display: flex;
+    justify-content: left;
+    margin: 15px 0 36px 0;
+}
+
+.footerSocialItem {
+    margin: 8px;
+    height: 24px;
+}
+
+.footerSocialItem:nth-child(2) {
+    margin: 8px 40px;
+}
+
+.footerSocialImg {
+    height: 24px;
+}
+
+.footerSocialsSearch {
+    margin-top: 15px;
+}
+
+/* Footer Copyright */
+
+.footerCopyright {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13px;
+    color: #FFFFFF;
+    text-align: right;
+
+    margin-top: 57px;
+    text-decoration: none;
+}

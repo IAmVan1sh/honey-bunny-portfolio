@@ -1,0 +1,145 @@
+.feedBack {
+    background: url("./../../assets/backgrounds/blueCurveLine.png") center no-repeat;
+    background-size: 100% auto;
+
+    margin-top: 205px;
+    position: relative;
+}
+
+.feedBackContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.feedBackContent {
+    width: 100%;
+    max-width: 377px;
+}
+
+.feedBackTitle {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 43px;
+    color: #414141;
+
+    margin-bottom: 4.666vw;
+}
+
+.feedBackInner {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-top: 0;
+    margin-bottom: 44px;
+}
+
+.feedBackSocials {
+    display: flex;
+}
+
+.feedBackSocial {
+    margin-right: 60px;
+}
+
+.feedBackSocial:last-child {
+    margin-right: 0;
+}
+
+/* FeedBack Comments */
+
+.feedBackComments {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 777px;
+
+
+    row-gap: 16px;
+    margin-top: 5.4vw;
+    margin-left: 23px;
+
+    position: relative;
+}
+
+.feedBackCommentsGroup1 {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+
+.feedBackCommentsGroup2 {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+}
+
+.feedBackCommentsImg {
+    box-shadow: 0 5px 50px #8c8c8c4d;
+    border-radius: 30px;
+}
+
+.feedBackCommentsGroup1 .feedBackCommentsImg:nth-child(1),
+.feedBackCommentsGroup2 .feedBackCommentsImg:nth-child(1) {
+    margin-right: 43px;
+}
+
+.feedBackCommentsGroup1 .feedBackCommentsImg:nth-child(1) {
+    margin-left: calc((100vw - 1000px) * 0.192);
+}
+
+.feedBackCommentsGroup1 .feedBackCommentsImg:nth-child(2),
+.feedBackCommentsGroup2 .feedBackCommentsImg:nth-child(2) {
+    margin-left: calc((100vw - 1000px) * 0.114);
+}
+
+/* Media */
+
+@media (min-width: 1501px) {
+    .feedBackTitle {
+        margin-bottom: 70px
+    }
+
+    .feedBackCommentsGroup1 .feedBackCommentsImg:nth-child(1) {
+        margin-left: 96px;
+    }
+
+    .feedBackCommentsGroup1 .feedBackCommentsImg:nth-child(2),
+    .feedBackCommentsGroup2 .feedBackCommentsImg:nth-child(2) {
+        margin-left: 57px;
+    }
+}
+
+@media (max-width: 1500px) {
+}
+
+@media (max-width: 1024px) {
+    .feedBack {
+        background: 0;
+    }
+
+    .feedBackContainer {
+        flex-direction: column;
+        justify-content: start;
+        row-gap: 40px;
+    }
+
+    .feedBackComments {
+        margin: 0;
+        max-width: 639px;
+    }
+
+    .feedBackCommentsGroup1 {
+        align-items: start;
+    }
+
+    .feedBackCommentsGroup2 .feedBackCommentsImg:nth-child(2) {
+        position: relative;
+        top: -34.75px;
+    }
+
+    .feedBackCommentsGroup1 .feedBackCommentsImg:nth-child(1),
+    .feedBackCommentsGroup1 .feedBackCommentsImg:nth-child(2),
+    .feedBackCommentsGroup2 .feedBackCommentsImg:nth-child(2) {
+        margin-left: 0;
+    }
+}

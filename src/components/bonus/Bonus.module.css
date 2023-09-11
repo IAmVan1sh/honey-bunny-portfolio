@@ -1,0 +1,62 @@
+.bonus {
+    margin-top: 80px;
+    position: relative;
+}
+
+.bonusBackground {
+    mask: url("./../../assets/bonus/bonusMask.svg") center no-repeat;
+    mask-size: 100% auto;
+    background: url("./../../assets/bonus/bonus.jpg") top no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    height: 31.4666vw;
+}
+
+.bonusContent {
+    display: flex;
+    flex-direction: column;
+    width: 24.6666vw;
+    top: 1.2vw;
+    left: 52.2vw;
+
+    z-index: 1;
+    position: absolute;
+}
+
+.bonusTitle {
+    font-size: 2.4vw;
+    font-weight: 800;
+    line-height: 2.866vw;
+    color: #414141;
+
+    margin-bottom: 1.333vw;
+}
+
+.bonusSubtitle {
+    font-size: 1.066vw;
+    font-weight: 400;
+    line-height: 1.266vw;
+    color: #414141;
+
+    margin-bottom: 1.333vw;
+}
+
+.bonusButton {
+    font-size: 1.2vw;
+    font-weight: 800;
+    line-height: 1.466vw;
+
+    width: 16vw;
+    height: 3.333vw;
+    border-radius: 1vw;
+
+    padding: 0.933vw 1.666vw;
+    margin-bottom: 1.333vw;
+}
+
+.bonusDescription {
+    font-size: 0.733vw;
+    font-weight: 400;
+    line-height: 0.866vw;
+    color: #8C8C8C;
+}

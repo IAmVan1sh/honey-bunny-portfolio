@@ -1,0 +1,117 @@
+/* Intro Swiper */
+
+.introSwiper {
+    display: flex !important;
+    position: relative;
+    margin-top: 2.777vw;
+
+    --swiper-pagination-color: #FFB5C6;
+    --swiper-pagination-bullet-border-radius: 0.625vw;
+    --swiper-pagination-bullet-width: 3.472vw;
+    --swiper-pagination-bullet-height: 0.6944vw;
+    --bullet-length: 5.555vw;
+    --swiper-pagination-bottom: 2.916vw;
+}
+
+.introSwiperImg {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Intro Swiper Mask */
+
+.introSwiperImgMask {
+    mask: url("../../../assets/intro/intro_mask.png") center no-repeat;
+    mask-size: 100% 100%;
+    background-color: #FFFFFF;
+    position: absolute;
+    width: 100%;
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Intro Swiper Text */
+
+.introSwiperDescription {
+    position: absolute;
+    color: #414141;
+    left: 18.8vw;
+    top: 0;
+    width: 28.66vw;
+    height: 18.66vw;
+    z-index: 3;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.introSwiperAnimation {
+    position: relative;
+    left: 4px;
+}
+
+.introSwiperHeader {
+    font-size: 3.32vw;
+    line-height: 4.33vw;
+    font-weight: 900;
+    margin-bottom: 1.33vw;
+}
+
+.introSwiperInner {
+    font-size: 1.33vw;
+    font-weight: 700;
+    margin-bottom: 1.33vw;
+}
+
+.introSwiperButton {
+    width: 14.66vw;
+    font-size: 1.2vw;
+    line-height: 1.4vw;
+
+    border-radius: 1vw;
+    padding: 0.933vw 1.666vw;
+
+    pointer-events: all;
+}
+
+/* Description Animation */
+@keyframes description {
+    0% {
+        left: 100px;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/* Media */
+
+@media (min-width: 745px) {
+    .introSwiper {
+        width: 100%;
+        height: 37.2vw; /* 558px (545px) */
+        /*max-width: 1500px;*/
+        /*max-height: 558px;*/
+    }
+
+    .introSwiperImgMask {
+        height: 37.2vw; /* 558px (545px) */
+        /*max-height: 558px;*/
+    }
+}
+
+@media (max-width: 744px) {
+    .introSwiper {
+        width: 100%;
+        /*height: 42.93vw;*/
+    }
+
+    .introSwiperImgMask {
+        height: 42.93vw;
+    }
+}

@@ -1,0 +1,23 @@
+.generalButton {
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #FF8EB4;
+
+    font-size: 1.25vw;
+    font-weight: 800;
+    line-height: 1.458vw;
+
+    width: 100%;
+    border: 0;
+    border-radius: 1.041vw;
+
+    padding: 0.972vw 1.736vw;
+    transition: transform 0.2s linear;
+}
+
+.generalButton:hover {
+    transform: scale(1.02);
+}
+
+.generalButton:active {
+}

@@ -1,0 +1,30 @@
+.shop {
+    background-image:   url("../../assets/backgrounds/blueBackground.svg"),
+                        url("../../assets/backgrounds/pinkBackgroung.svg");
+    background-position: 0 calc(51vw - 70px), 80vw calc(51vw - 70px);
+    background-size: auto 42vw, auto 42vw;
+    background-repeat: no-repeat;
+}
+
+.background {
+    position: absolute;
+    height: 42vw;
+    top: 55.2vw;
+    z-index: -1;
+}
+
+.background:first-child {
+    left: 0;
+}
+
+.background:last-child {
+    right: 0;
+}
+
+
+/* Components additional styles */
+
+.catalogGrid {
+    margin-right: auto;
+    margin-left: auto;
+}

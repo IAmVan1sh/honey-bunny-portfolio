@@ -1,0 +1,38 @@
+.catalogItems {
+    justify-content: center;
+    padding-bottom: 6.944vw;
+}
+
+.catalogItemsTitle {
+    font-size: 2.5vw;
+    font-weight: 800;
+    line-height: 2.986vw;
+
+    margin-top: 4.166vw;
+}
+
+.catalogItemsItem {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2.083vw;
+    row-gap: 2.083vw;
+
+    margin-top: 4.166vw;
+}
+
+
+/* Sets */
+
+.catalogItemsSubtitle {
+    font-size: 1.666vw;
+    font-weight: 700;
+    line-height: 2.013vw;
+}
+
+.lessMarginTop {
+    margin-top: 2.777vw;
+}
+
+.biggerMarginTop {
+    margin-top: 4.861vw;
+}

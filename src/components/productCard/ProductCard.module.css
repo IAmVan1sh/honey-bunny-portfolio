@@ -1,0 +1,58 @@
+.productCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+
+    padding: 1.666vw;
+    width: 18.5vw;
+    height: 29.93vw;
+    border-radius: 2.083vw;
+    box-shadow: 0 0.347vw 2.777vw rgba(65, 65, 65, 10%);
+}
+
+.productImg {
+    border-radius: 2.083vw;
+}
+
+.productTitle {
+    text-align: center;
+    font-size: 1.25vw;
+    font-weight: 800;
+    line-height: 1.527vw;
+    color: #414141;
+
+    margin-top: 1.041vw;
+}
+
+.productStatus {
+    text-align: center;
+    font-size: 1.111vw;
+    font-weight: 400;
+    line-height: 1.319vw;
+    height: 0.902vw;
+
+    margin-top: 1.041vw;
+}
+
+.Green {
+    color: #B6DF81;
+}
+
+.Red {
+    color: #F77474;
+}
+
+.productPrice {
+    text-align: center;
+    font-size: 1.666vw;
+    font-weight: 700;
+    line-height: 2.013vw;
+    color: #414141;
+
+    margin-top: 1.041vw;
+    margin-bottom: 1.041vw;
+}
+
+.productPerWeight {
+    color: #D2D2D2;
+}

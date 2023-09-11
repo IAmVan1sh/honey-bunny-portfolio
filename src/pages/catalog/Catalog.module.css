@@ -1,0 +1,33 @@
+.catalog {
+}
+
+.catalogTitle {
+    font-size: 2.5vw;
+    font-weight: 800;
+    line-height: 2.986vw;
+
+    margin-top: 4.166vw;
+}
+
+.descriptionTitle {
+    font-size: 1.666vw;
+
+    margin-top: 6.805vw;
+}
+
+.description {
+    font-size: 1.111vw;
+    font-weight: 400;
+    width: 46.52vw;
+
+    margin-top: 2.083vw;
+}
+
+.descriptionLinks {
+    text-decoration: none;
+    color: #FF8EB4;
+}
+
+.catalogGrid {
+    margin-top: 4.861vw;
+}

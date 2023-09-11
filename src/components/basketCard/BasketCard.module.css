@@ -1,0 +1,92 @@
+.productCard {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+
+    padding: 2.083vw;
+    width: 39.58vw;
+    height: 16.80vw;
+    border-radius: 2.083vw;
+    box-shadow: 0 0.347vw 2.777vw rgba(65, 65, 65, 10%);
+}
+
+.productRemove {
+    height: 1.666vw;
+
+    cursor: pointer;
+}
+
+.productRemove:hover {
+    transform: scale(1.05);
+}
+
+.productImg {
+    height: 12.63vw;
+    border-radius: 2.083vw;
+
+    margin-left: 2.083vw;
+}
+
+.basketContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 8.680vw;
+
+    margin-left: 2.083vw;
+}
+
+.productTitle {
+    text-align: center;
+    font-size: 1.25vw;
+    font-weight: 800;
+    line-height: 1.527vw;
+    color: #414141;
+}
+
+.productPrice {
+    font-size: 1.111vw;
+    font-weight: 700;
+    line-height: 1.319vw;
+    color: #414141;
+}
+
+.productCounter {
+    display: flex;
+    justify-content: space-between;
+    width: 6.736vw;
+}
+
+.productCounterButton {
+    width: 1.666vw;
+    height: 1.666vw;
+    background-color: #FFFFFF;
+
+    border: 0;
+    padding: 0;
+}
+
+.productCounterButton:hover {
+    color: #FFFFFF;
+    transform: scale(1.05);
+}
+
+.productCounterButtonImage {
+    height: 1.666vw;
+}
+
+.basketPrice {
+    display: flex;
+    align-items: flex-end;
+
+    font-size: 1.25vw;
+    font-weight: 800;
+    line-height: 1.527vw;
+
+    margin-left: auto;
+    height: 8.680vw;
+}
+
+.productPerWeight {
+    color: #D2D2D2;
+}

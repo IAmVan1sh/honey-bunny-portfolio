@@ -1,0 +1,29 @@
+.container {
+    --container-padding-size: 9.375vw; /* old size - 5.376vw*/
+
+    /*max-width: calc(81.30vw + (var(--container-padding-size) * 2)); !* 1170px *!*/
+    width: 100%;
+    margin: auto;
+    padding: 0 var(--container-padding-size);
+
+    overflow: visible;
+    position: relative;
+}
+
+.pinkBubble {
+    position: relative;
+}
+
+.pinkBubble:after {
+    content: "";
+    background-color: #FFB5C6;
+
+    width: 3.611vw;
+    height: 3.611vw;
+    top: -1.388vw;
+    left: -1.805vw;
+    border-radius: 50%;
+
+    position: absolute;
+    z-index: -1;
+}

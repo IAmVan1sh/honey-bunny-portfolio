@@ -1,0 +1,58 @@
+.mistake {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+
+    top: 0;
+    position: absolute;
+    z-index: 6;
+}
+
+.mistakeContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 39.58vw;
+}
+
+.mistakeImg {
+    height: 3.263vw;
+}
+
+.mistakeTitle {
+    font-size: 2.5vw;
+    font-weight: 800;
+    line-height: 2.986vw;
+
+    margin-top: 2.083vw;
+}
+
+.mistakeText {
+    font-size: 1.111vw;
+    font-weight: 400;
+    line-height: 1.319vw;
+    text-align: center;
+
+    margin-top: 2.083vw;
+}
+
+.mistakeTextLink {
+    color: #FF8EB4;
+    text-decoration: none;
+}
+
+.mistakeNav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    margin-top: 5.555vw;
+}
+
+.mistakeButton {
+    width: 15.41vw;
+}

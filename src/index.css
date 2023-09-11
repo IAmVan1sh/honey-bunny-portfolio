@@ -1,0 +1,109 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  color: #414141;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 4.861vw 0 0 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+/* Intro Swiper additional styles */
+
+.swiper-slide-active {
+  z-index: 4;
+  overflow: hidden;
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: left;
+  left: 24% !important;
+}
+
+.swiper-pagination-bullet {
+  margin: 0.2777vw !important;
+  transition: width 0.2s linear;
+}
+
+.swiper-pagination-bullet-active {
+  width: var(--bullet-length);
+}
+
+/* Popular Swiper additional styles */
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #FFB5C6;
+  color: white;
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+  --swiper-button-animation-bottom: 5px;
+  --swiper-button-animation-scale: 0.5;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  --swiper-button-animation-bottom: -30px;
+  --swiper-button-animation-scale: 1.3;
+}
+
+.swiper-button-prev {
+  left: calc(9.375vw / 2);
+  transform: translateX(-50%);
+}
+
+.swiper-button-next {
+  right: calc(9.375vw / 2);
+  transform: translateX(50%);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: '';
+  width: 15px;
+  height: 24px;
+
+  position: relative;
+}
+
+.swiper-button-prev::after {
+  right: 2px;
+  background-image: url("./assets/Prev.svg");
+}
+
+.swiper-button-next::after {
+  left: 2px;
+  background-image: url("./assets/Next.svg");
+}
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 42px;
+  bottom: var(--swiper-button-animation-bottom);
+  transform: scale(var(--swiper-button-animation-scale));
+
+  transition: bottom 0.2s linear, transform 0.2s linear;
+}
+
+.swiper-button-prev::before {
+  right: 12px;
+  background-image: url("./assets/PrevBottom.svg");
+}
+
+.swiper-button-next::before {
+  left: 12px;
+  background-image: url("./assets/NextBottom.svg");
+}

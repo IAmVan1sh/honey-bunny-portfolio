@@ -1,0 +1,74 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.confirmOrderBackground1 {
+    height: 35vw;
+    top: 4.444vw;
+    left: 9.444vw;
+
+    position: absolute;
+    z-index: -1;
+}
+
+.confirmOrderBackground2 {
+    height: 35vw;
+    top: 27.22vw;
+    left: 63vw;
+
+    position: absolute;
+    z-index: -1;
+}
+
+.confirmOrder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35.83vw;
+
+    margin-top: 16.66vw;
+    margin-bottom: 10.27vw;
+}
+
+.confirmOrderTitle {
+    display: flex;
+    align-items: center;
+    font-size: 1.666vw;
+    line-height: 2.013vw;
+}
+
+.confirmOrderConfirm {
+    height: 1.666vw;
+
+    margin-left: 1.041vw;
+}
+
+.confirmOrderText {
+    font-size: 1.111vw;
+    font-weight: 400;
+    line-height: 1.319vw;
+
+    text-align: center;
+    margin-top: 2.083vw;
+}
+
+.confirmOrderThanks {
+    display: flex;
+    align-items: center;
+    font-size: 1.111vw;
+    font-weight: 400;
+    line-height: 1.319vw;
+
+    margin-top: 2.256vw;
+}
+
+.confirmOrderHeart {
+    margin-left: 0.694vw;
+}
+
+.confirmOrderButton {
+    width: 15.27vw;
+
+    margin-top: 2.083vw;
+}
