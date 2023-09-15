@@ -4,10 +4,12 @@
 }
 
 .bonusBackground {
-    mask: url("./../../assets/bonus/bonusMask.svg") center no-repeat;
+    -webkit-mask: url("../../assets/bonus/bonusMask.svg") center no-repeat;
+    -webkit-mask-size: 100% auto;
+    mask: url("../../assets/bonus/bonusMask.svg") center no-repeat;
     mask-size: 100% auto;
-    background: url("./../../assets/bonus/bonus.jpg") top no-repeat;
-    background-size: 100% auto;
+    background: url("../../assets/bonus/bonus.jpg") top no-repeat;
+    background-size: 100% auto, 100% auto;
     width: 100%;
     height: 31.4666vw;
 }
