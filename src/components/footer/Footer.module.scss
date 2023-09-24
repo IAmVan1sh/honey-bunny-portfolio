@@ -11,32 +11,38 @@
 .footerContent {
     display: flex;
     flex-direction: column;
-    max-width: 771px;
+    max-width: 53.54vw;
     top: 6.527vw;
-    left: calc((100vw - 704px) * 0.6154);
+    left: 30.20vw;
 
     position: relative;
 }
 
 .footerGeneralContent {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 }
 
 .footerTitle {
     font-size: 1.111vw;
-    line-height: 19px;
+    line-height: 1.319vw;
     color: #FFFFFF;
 
+    white-space: nowrap;
     cursor: default;
+
+    &#footerSubscribe {
+        margin-top: 2.5vw;
+    }
 }
 
 .footerText {
-    font-size: 11px;
+    font-size: 0.7638vw;
     font-weight: 400;
-    line-height: 13px;
+    line-height: 0.9127vw;
     color: #FFFFFF;
 
-    margin-top: 14px;
+    margin-top: 0.9722vw;
     text-decoration: none;
 }
 
@@ -45,16 +51,14 @@
 .footerNav {
     display: flex;
     flex-direction: column;
-    width: 194px;
 }
 
 /* Footer Contacts */
 
 .footerContacts {
     display: grid;
-    row-gap: 7px;
-    grid-template-columns: repeat(2, minmax(166px, 194px));
-    grid-template-rows: 103px 78px;
+    row-gap: 2.847vw;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 'first second'
                          'third third';
 }
@@ -65,7 +69,6 @@
     grid-area: first;
 
     width: 100%;
-    max-width: 194px;
 }
 
 .footerContactsAddresses {
@@ -76,8 +79,7 @@
 
 .footerContactsSearch {
     grid-area: third;
-    max-width: 290px;
-    margin-top: 34px;
+    max-width: 20.13vw;
 }
 
 /* Footer Socials */
@@ -85,41 +87,42 @@
 .footerSocials {
     display: flex;
     flex-direction: column;
-    width: 195px;
+    width: 100%;
 }
 
 .footerSocial {
     display: flex;
-    justify-content: left;
-    margin: 15px 0 36px 0;
+    justify-content: space-between;
+    margin-top: 1.041vw;
 }
 
 .footerSocialItem {
-    margin: 8px;
-    height: 24px;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.777vw;
+    height: 2.777vw;
 
-.footerSocialItem:nth-child(2) {
-    margin: 8px 40px;
 }
 
 .footerSocialImg {
-    height: 24px;
+    height: 1.666vw;
 }
 
 .footerSocialsSearch {
-    margin-top: 15px;
+    margin-top: 1.041vw;
+    max-width: 13.68vw;
 }
 
 /* Footer Copyright */
 
 .footerCopyright {
-    font-size: 11px;
+    font-size: 0.763vw;
     font-weight: 400;
-    line-height: 13px;
+    line-height: 0.902vw;
     color: #FFFFFF;
     text-align: right;
 
-    margin-top: 57px;
+    margin-top: 3.958vw;
     text-decoration: none;
 }

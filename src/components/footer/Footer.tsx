@@ -1,5 +1,5 @@
 import {FC} from "react";
-import styles from "./Footer.module.css"
+import styles from "./Footer.module.scss"
 import {Link, NavLink} from "react-router-dom";
 import {CATALOG_ROUTE, SHOP_ROUTE} from "../../utils/consts.ts";
 import Input from "../input/Input.tsx";
@@ -64,7 +64,7 @@ const Footer: FC = () => {
                             )}
                         </div>
 
-                        <h4 className={styles.footerTitle}>Слідкуй за оновленнями</h4>
+                        <h4 className={styles.footerTitle} id={styles.footerSubscribe}>Слідкуй за оновленнями</h4>
 
                         <Input
                             className={styles.footerSocialsSearch}

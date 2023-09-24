@@ -1,4 +1,4 @@
-import {FC} from "react";
+import {FC, useEffect, useRef} from "react";
 import styles from "./NavBar.module.css"
 import global from "../../styles/global.module.css"
 import {NavLink} from "react-router-dom";
@@ -7,8 +7,17 @@ import HeaderAssets from "../../assets/header/HeaderAssets.ts";
 import Input from "../input/Input.tsx";
 
 const NavBar: FC = () => {
+    const headerRef = useRef<HTMLTableHeaderCellElement>(null!)
+    useEffect(() => {
+        document.addEventListener("scroll", () => {
+            headerRef.current.style.top = `${scrollY}px`;
+            console.log(scrollY);
+        })
+    }, [])
+
+
     return (
-        <header className={styles.navbar}>
+        <header className={styles.navbar} ref={headerRef}>
 
             <nav className={`${styles.navbarInner} ${global.container}`}>
 
