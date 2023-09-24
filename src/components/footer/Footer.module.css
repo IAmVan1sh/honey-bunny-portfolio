@@ -23,7 +23,7 @@
 }
 
 .footerTitle {
-    font-size: 16px;
+    font-size: 1.111vw;
     line-height: 19px;
     color: #FFFFFF;
 
@@ -76,6 +76,7 @@
 
 .footerContactsSearch {
     grid-area: third;
+    max-width: 290px;
     margin-top: 34px;
 }
 

@@ -1,11 +1,11 @@
 import {FC} from "react";
-import {productCardProps} from "../../types/productCard.ts";
+import {ProductCardProps} from "../../types/productCard.ts";
 import styles from "./BasketCard.module.css"
 import remove from "../../assets/Remove.svg"
 import decrease from "../../assets/Minus.svg"
 import increase from "../../assets/Plus.svg"
 
-const BasketCard: FC<productCardProps> = (props) => {
+const BasketCard: FC<ProductCardProps> = (props) => {
 
     return (
         <section {...props} className={`${styles.productCard} ${props.className}`}>

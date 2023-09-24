@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import {productCardProps} from "../types/productCard.ts";
+import {ProductCardProps} from "../types/productCard.ts";
 
-const StyledCard = styled.div<productCardProps>`
+const StyledCard = styled.div<ProductCardProps>`
     // display: flex;
     // flex-direction: column;
     // background-color: #FFFFFF;

@@ -1,4 +1,4 @@
-import {productDataBase, productTitlesBase, setsType} from "../../types/productCard";
+import {ProductDataBase, ProductTitlesBase, SetsType} from "../../types/productCard";
 import {
     marshmallow,
     zephyr,
@@ -8,7 +8,7 @@ import {
     jelly, tastesSets
 } from "./productImages";
 
-const productData: productDataBase = {
+const productData: ProductDataBase = {
     'popular': [
         {id: 1, image: zephyr.zephyr1, title: 'макаруни з ківі', inStock: 10, price: 100, isWeight: 100},
         {id: 2, image: zephyr.zephyr2, title: 'Зефір банановий', inStock: 10, price: 40, isWeight: 100},
@@ -67,7 +67,7 @@ const productData: productDataBase = {
     ],
 }
 
-export const productSets: setsType = {
+export const productSets: SetsType = {
     byWeight: [
         {id: 1, image: tastesSets.tastesSets1, title: 'Зефір яблучний', inStock: 10, price: 40, isWeight: 100},
         {id: 2, image: tastesSets.tastesSets2, title: 'Зефір яблучний', inStock: 10, price: 40, isWeight: 100},
@@ -83,7 +83,7 @@ export const productSets: setsType = {
     ]
 }
 
-export const productTitles: productTitlesBase = {
+export const productTitles: ProductTitlesBase = {
     'sets': "Сети",
     'marshmallow': "Маршмелоу",
     'zephyr': "Зефір",

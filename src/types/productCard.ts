@@ -1,6 +1,6 @@
 import {DetailedHTMLProps, HTMLAttributes} from "react";
 
-interface productCardType {
+interface ProductCardType {
     id: number;
     image: string;
     title: string;
@@ -9,26 +9,26 @@ interface productCardType {
     isWeight: number;
 }
 
-export interface productCardProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    productObj: productCardType;
+export interface ProductCardProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+    productObj: ProductCardType;
 }
 
-export interface productDataBase {
-    'popular': productCardType[];
-    'marshmallow': productCardType[];
-    'zephyr': productCardType[];
-    'cookies': productCardType[];
-    'macaroons': productCardType[];
-    'birds-milk': productCardType[];
-    'jelly': productCardType[];
+export interface ProductDataBase {
+    'popular': ProductCardType[];
+    'marshmallow': ProductCardType[];
+    'zephyr': ProductCardType[];
+    'cookies': ProductCardType[];
+    'macaroons': ProductCardType[];
+    'birds-milk': ProductCardType[];
+    'jelly': ProductCardType[];
 }
 
-export interface setsType {
-    byWeight: productCardType[],
-    prePackaged: productCardType[]
+export interface SetsType {
+    byWeight: ProductCardType[],
+    prePackaged: ProductCardType[]
 }
 
-export interface productTitlesBase {
+export interface ProductTitlesBase {
     'sets': string;
     'marshmallow': string;
     'zephyr': string;

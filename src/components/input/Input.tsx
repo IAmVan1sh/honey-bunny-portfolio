@@ -22,52 +22,50 @@ const Input: FC<InputProps> = (props) => {
     }
 
     return (
-        <div className={`${styles.input} ${props.className}`}>
+        <div className={(props.type === "radio" || props.type === "checkbox") ?
+            ""
+            :
+            `${styles.input} ${props.className}`
+        }>
             <StyledInput
                 {...props}
-                id={"elt"}
-                className={styles.inputInput}
                 ref={inputRef}
+                className={`${styles.inputInput} ${(props.type === "radio" || props.type === "checkbox") && props.className}`}
+                type={ props.type || "text" }
                 placeholder={
-                    props.$variant === "warning" ?
-                        (isAlreadyReceives ?
-                            "Цей E-mail вже отримує розсилання"
-                            :
-                            "Невірно введені дані")
-                        :
-                        props.placeholder || "Знайти смаколики"
+                    props.$variant === "warning" && (
+                        isAlreadyReceives &&
+                            "Цей E-mail вже отримує розсилання" ||
+                            "Невірно введені дані"
+                        ) ||
+                    props.placeholder ||
+                    "Знайти смаколики"
                 }
-                type={props.$email ? "email" : "text"}
             />
-            <img
-                alt="btn"
-                className={styles.inputImg}
-                src={`${props.buttonPicture ? 
-                    InputAssets[props.buttonPicture]
-                    :
-                    props.$variant === "transparent" ?
-                        InputAssets.searchWhite 
-                        :
-                        props.$variant === "warning" ? 
-                            InputAssets.warning
-                            :
-                            props.$variant === "checked" ?
-                                InputAssets.checked
-                                :
-                                props.$variant === "wrong" ?
-                                    InputAssets.wrong
-                                    :
-                                    props.$variant === "unchecked" ?
-                                        InputAssets.unchecked
-                                        :
-                                        props.$variant === "transparent-next" ?
-                                            InputAssets.nextWhite
-                                            :
-                                            InputAssets.searchGray
-                }`}
-                style={(props.$variant === ("checked" || "wrong" || "unchecked") ? {cursor: 'default'} : {})}
-                onClick={(event) => inputHandle(event)}
-            />
+
+            {
+                props.type === "radio" ||
+                props.type === "checkbox" ||
+                props.$noImage ||
+                <img
+                    alt="btn"
+                    className={styles.inputImg}
+                    src={`${
+                        props.buttonPicture ||
+                        props.$variant === "transparent" && InputAssets.searchWhite ||
+                        props.$variant === "warning" && InputAssets.warning ||
+                        props.$variant === "checked" && InputAssets.checked ||
+                        props.$variant === "wrong" && InputAssets.wrong ||
+                        props.$variant === "unchecked" && InputAssets.unchecked ||
+                        props.$variant === "next" && InputAssets.nextGray ||
+                        props.$variant === "transparent-next" && InputAssets.nextWhite ||
+                        InputAssets.searchGray
+                     }`}
+                    style={(props.$variant === ("checked" || "wrong" || "unchecked") ? {cursor: 'default'} : {})}
+                    onClick={(event) => inputHandle(event)}
+                />
+            }
+
         </div>
     )
 };

@@ -1,0 +1,145 @@
+.bigMargin {
+	margin-top: 1.736vw !important;
+}
+
+.flexReverse {
+	display: flex;
+	flex-flow: row-reverse;
+	justify-content: start;
+}
+
+.orderFormContainer {
+	margin-top: 5.555vw;
+
+	& form {
+		width: 32.63vw;
+	}
+
+}
+
+.orderFormTitle {
+	font-size: 2.5vw;
+	font-weight: 800;
+	line-height: 2.987;
+
+	white-space: nowrap;
+}
+
+.orderFormChildTitle {
+	font-size: 1.666vw;
+	line-height: 1.319vw;
+
+	margin-top: 4.861vw;
+}
+
+.orderFormLabel {
+	font-size: 1.111vw;
+	font-weight: 400;
+	line-height: 1.319vw;
+}
+
+.orderFormChildSubtitle {
+	font-size: 1.111vw;
+	line-height: 1.319vw;
+	color: #414141;
+
+	margin-top: 2.777vw;
+}
+
+.orderFormContacts {
+	width: 100%;
+	margin-top: 4.861vw;
+
+}
+
+.orderFormDelivery {
+	width: 100%;
+	margin-top: 4.861vw;
+}
+
+.orderFormInputContainer {
+	margin-top: 1.388vw;
+}
+
+.orderFormInput  {
+	margin-top: 0.694vw;
+	max-width: 25.69vw;
+
+	&[type="radio"],
+	&[type="checkbox"] {
+		accent-color: #ff8eb4;
+		margin: 0;
+	}
+}
+
+// Radio and Checkbox label's style
+.orderFormLabelRC {
+	font-size: 0.9722vw;
+	font-weight: 400;
+	line-height: 17px;
+	color: #414141;
+
+	margin-left: 0.5555vw;
+}
+
+// Text Area styles
+.orderFormComment {
+	display: block;
+	height: 7.152vw;
+	width: 100%;
+	max-width: 25.69vw;
+	padding: 1.388vw 1.736vw 1.388vw 1.736vw;
+	margin-top: 1.736vw;
+
+	border: 1px solid #8C8C8C;
+	border-radius: 2.083vw;
+
+	transition: width .1s linear, padding .1s linear;
+	outline: none;
+	resize: none;
+
+	font-size: 0.972vw;
+	font-weight: 400;
+	line-height: 1.180vw;
+	caret-color: #8C8C8C;
+}
+
+// Summary
+
+.data1 { grid-area: data1; }
+.data2 { grid-area: data2; }
+.data3 { grid-area: data3; margin-top: 1.041vw; }
+.key1 { grid-area: key1; }
+.key2 { grid-area: key2; }
+.key3 { grid-area: key3; margin-top: 1.041vw; }
+
+.orderFormSummary {
+	display: grid;
+	grid-row-gap: 1.041vw;
+	grid-template:  'key1 data1'
+					'key2 data2'
+					'key3 data3';
+	margin-top: 3.472vw;
+}
+
+.orderFormSummaryKey {
+	font-size: 1.10vw;
+	font-weight: 800;
+	line-height: 1.527vw;
+	color: #414141;
+
+	min-width: 19.79vw;
+}
+
+.orderFormSummaryData {
+	font-size: 1.111vw;
+	font-weight: 400;
+	line-height: 1.319vw;
+	color: #414141;
+}
+
+// Submit Button
+.orderFormButton {
+	margin-top: 3.472vw;
+	width: 15.27vw;
+}

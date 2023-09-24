@@ -78,12 +78,12 @@ h1, h2, h3, h4, p {
 
 .swiper-button-prev::after {
   right: 2px;
-  background-image: url("./assets/Prev.svg");
+  background-image: url("assets/Prev.svg");
 }
 
 .swiper-button-next::after {
   left: 2px;
-  background-image: url("./assets/Next.svg");
+  background-image: url("assets/Next.svg");
 }
 
 .swiper-button-prev::before,
@@ -100,10 +100,10 @@ h1, h2, h3, h4, p {
 
 .swiper-button-prev::before {
   right: 12px;
-  background-image: url("./assets/PrevBottom.svg");
+  background-image: url("assets/PrevBottom.svg");
 }
 
 .swiper-button-next::before {
   left: 12px;
-  background-image: url("./assets/NextBottom.svg");
+  background-image: url("assets/NextBottom.svg");
 }

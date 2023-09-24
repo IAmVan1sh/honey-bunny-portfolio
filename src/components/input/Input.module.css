@@ -1,7 +1,6 @@
 .input {
     display: flex;
     width: 100%;
-    max-width: 290px;
     height: 3.055vw;
     justify-content: right;
     align-items: center;
@@ -10,7 +9,7 @@
 }
 
 .inputInput {
-    height: 3.055vw;
+    height: 100%; /* 3.055 */
 
     box-shadow: 0 0.2777vw 0.694vw rgba(0, 0, 0, 10%);
     border: 0;

@@ -1,10 +1,10 @@
 import {DetailedHTMLProps, InputHTMLAttributes} from "react";
 
 export interface InputProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>{
-    $variant?: "primary" | "transparent" | "warning" | "checked" | "wrong" | "unchecked" | "transparent-next";
-    $email?: boolean;
+    $variant?: "primary" | "transparent" | "warning" | "checked" | "wrong" | "unchecked" | "next" | "transparent-next";
     $hide?: boolean;
     $shift?: boolean;
+    $noImage?: boolean;
     buttonPicture?:
         "searchGray" |
         "searchWhite" |

@@ -68,8 +68,8 @@ const Footer: FC = () => {
 
                         <Input
                             className={styles.footerSocialsSearch}
-                            $variant="transparent"
-                            $email
+                            $variant="transparent-next"
+                            type="email"
                             placeholder="Введіть ваш E-mail"
                         />
 

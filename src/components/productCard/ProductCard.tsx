@@ -1,9 +1,9 @@
 import {FC} from "react";
-import {productCardProps} from "../../types/productCard.ts";
+import {ProductCardProps} from "../../types/productCard.ts";
 import styles from "./ProductCard.module.css"
 import Button from "../button/Button.tsx";
 
-const ProductCard: FC<productCardProps> = (props) => {
+const ProductCard: FC<ProductCardProps> = (props) => {
 
     return (
         <section {...props} className={`${styles.productCard} ${props.className}`}>
