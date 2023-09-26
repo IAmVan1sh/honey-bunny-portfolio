@@ -23,5 +23,6 @@ here you can see wich technologies I am studying now and how I use it.
 
 >- React Select
 >- Better Adaptivity for mobiles
->- MobX state manager
+>- ?MobX state manager
 >- Authorization
+>- From time to time I will replace all CSS with SCSS with all its syntax rules 
