@@ -1,5 +1,5 @@
 import {FC} from "react";
-import styles from "./FeedBack.module.css"
+import styles from "./FeedBack.module.scss"
 import global from "../../styles/global.module.css"
 import {SocialAssets} from "../../assets/social/SocialAssets.ts";
 import {Link} from "react-router-dom";

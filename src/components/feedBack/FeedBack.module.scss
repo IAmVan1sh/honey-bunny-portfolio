@@ -2,7 +2,7 @@
     background: url("./../../assets/backgrounds/blueCurveLine.png") center no-repeat;
     background-size: 100% auto;
 
-    margin-top: 205px;
+    margin-top: 14.23vw;
     position: relative;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .feedBackTitle {
-    font-size: 36px;
+    font-size: 2.5vw;
     font-weight: 800;
     line-height: 43px;
     color: #414141;
@@ -39,10 +39,11 @@
 
 .feedBackSocial {
     margin-right: 60px;
-}
 
-.feedBackSocial:last-child {
-    margin-right: 0;
+    &:last-child {
+        margin-right: 0;
+    }
+
 }
 
 /* FeedBack Comments */
@@ -78,38 +79,63 @@
     border-radius: 30px;
 }
 
-.feedBackCommentsGroup1 .feedBackCommentsImg:nth-child(1),
-.feedBackCommentsGroup2 .feedBackCommentsImg:nth-child(1) {
-    margin-right: 43px;
+.feedBackCommentsGroup1,
+.feedBackCommentsGroup2 {
+
+    & .feedBackCommentsImg:nth-child(1) {
+        margin-right: 43px;
+    }
 }
 
 .feedBackCommentsGroup1 .feedBackCommentsImg:nth-child(1) {
     margin-left: calc((100vw - 1000px) * 0.192);
 }
 
-.feedBackCommentsGroup1 .feedBackCommentsImg:nth-child(2),
-.feedBackCommentsGroup2 .feedBackCommentsImg:nth-child(2) {
-    margin-left: calc((100vw - 1000px) * 0.114);
+.feedBackCommentsGroup1,
+.feedBackCommentsGroup2 {
+
+    & .feedBackCommentsImg:nth-child(2) {
+        margin-left: calc((100vw - 1000px) * 0.114);
+    }
 }
 
 /* Media */
 
-@media (min-width: 1501px) {
-    .feedBackTitle {
-        margin-bottom: 70px
-    }
+@media (max-width: 390px) {
 
-    .feedBackCommentsGroup1 .feedBackCommentsImg:nth-child(1) {
-        margin-left: 96px;
-    }
-
-    .feedBackCommentsGroup1 .feedBackCommentsImg:nth-child(2),
-    .feedBackCommentsGroup2 .feedBackCommentsImg:nth-child(2) {
-        margin-left: 57px;
+    .feedBackCommentsGroup1 img {
+            width: 75.89vw;
     }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 784px) {
+
+    .feedBackInner {
+        display: none;
+    }
+
+    .feedBackSocial {
+        margin-right: 7.653vw;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+    }
+
+    .feedBackCommentsGroup1 {
+        flex-direction: column;
+
+        & .feedBackCommentsImg:nth-child(2) {
+            margin-top: 1.388vw;
+        }
+
+    }
+
+    .feedBackCommentsGroup2 {
+        display: none;
+    }
+
 }
 
 @media (max-width: 1024px) {
@@ -142,4 +168,23 @@
     .feedBackCommentsGroup2 .feedBackCommentsImg:nth-child(2) {
         margin-left: 0;
     }
+}
+
+@media (min-width: 1501px) {
+    .feedBackTitle {
+        margin-bottom: 70px
+    }
+
+    .feedBackCommentsGroup1 .feedBackCommentsImg:nth-child(1) {
+        margin-left: 96px;
+    }
+
+    .feedBackCommentsGroup1 .feedBackCommentsImg:nth-child(2),
+    .feedBackCommentsGroup2 .feedBackCommentsImg:nth-child(2) {
+        margin-left: 57px;
+    }
+}
+
+@media (max-width: 1500px) {
+
 }

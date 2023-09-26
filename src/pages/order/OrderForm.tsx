@@ -85,7 +85,7 @@ const OrderForm: FC = () => {
                                     ((props.type === "radio" || props.type === "checkbox") && styles.flexReverse),
                                     (props.$bigMarginTop || ""),
                                 ].join(' ')}
-                                style={props.type === "textarea" && {marginTop: "70px"} || {}}
+                                style={props.type === "textarea" && {marginTop: "4.861vw"} || {}}
                             >
 
                                 <label

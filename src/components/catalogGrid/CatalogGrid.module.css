@@ -1,10 +1,10 @@
 .catalogTitle {
-    font-size: 36px;
+    font-size: 2.5vw;
     font-weight: 800;
     color: #414141;
 
     margin-top: 5.555vw;
-    margin-bottom: 48px;
+    margin-bottom: 3.333vw;
 }
 
 /* Catalog Grid */
@@ -12,7 +12,7 @@
 .catalogGrid {
     display: flex;
     flex-direction: column;
-    max-width: 970px;
+    max-width: 67.36vw;
 }
 
 .catalogItem0 { grid-area: first; }
@@ -24,10 +24,10 @@
 .catalogItem6 { grid-area: third-down }
 
 .catalogContainer {
-    max-height: 374px;
+    height: 25.97vw;
     display: grid;
-    grid-row-gap: 22px;
-    grid-column-gap: 30px;
+    grid-row-gap: 1.527vw;
+    grid-column-gap: 2.083vw;
     grid-template-columns: 17fr 17fr 10fr 17fr 27fr;
     grid-template:  'first first-up first-up second-up third-up'
                     'first first-down second-down second-down third-down';
@@ -36,20 +36,26 @@
 /* Catalog Items */
 
 .catalogItem {
-    height: 176px;
+    height: 12.22vw;
     position: relative;
 
     overflow: hidden;
-    border-radius: 30px;
+    border-radius: 2.083vw;
 }
 
-.catalogItem:first-child {
-    height: 374px;
+.catalogItem:first-child,
+.catalogItem:first-child img{
+    height: 25.97vw;
 }
 
 .catalogImg {
+    height: 12.22vw;
     transition: transform 0.4s linear;
 }
+
+/*.catalogImg:first-child {*/
+/*    height: 25.97vw;*/
+/*}*/
 
 .catalogImg:hover {
     transform: scale(1.3);
@@ -61,10 +67,10 @@
     color: white;
 
     width: 100%;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 1.666vw;
+    line-height: 2.013vw;
 
     left: 50%;
-    bottom: 10px;
+    bottom: 0.6944vw;
     transform: translateX(-50%)
 }

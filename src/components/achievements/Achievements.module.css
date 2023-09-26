@@ -1,16 +1,16 @@
 .achievements {
     display: flex;
     flex-direction: column;
-    margin-top: 45px;
+    margin-top: 3.125vw;
 }
 
 .achievementsTitle {
-    font-size: 36px;
+    font-size: 2.5vw;
     font-weight: 800;
-    line-height: 43px;
+    line-height: 2.986vw;
     text-align: center;
 
-    margin-bottom: 110px;
+    margin-bottom: 7.638vw;
     color: #414141;
 }
 
@@ -19,7 +19,7 @@
 .achievementsItems {
     display: flex;
     justify-content: center;
-    height: 108px;
+    height: 7.5vw;
 
     position: relative;
 }
@@ -28,47 +28,47 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 140px;
+    width: 9.722vw;
 
     position: relative;
 }
 
 .achievementsImg {
-    width: 70px;
-    margin-bottom: 18px;
+    width: 4.861vw;
+    margin-bottom: 1.25vw;
 }
 
 .achievementsSubtitle {
-    font-size: 16px;
+    font-size: 1.111vw;
     font-weight: 400;
-    line-height: 19px;
+    line-height: 1.319vw;
 
-    margin-left: -10px;
-    margin-right: -10px;
+    margin-left: -0.694vw;
+    margin-right: -0.694vw;
     text-align: center;
 }
 
 /* achievements Items Positions */
 
 .achievementsItem:nth-child(1) {
-    right: 100px;
+    right: 6.944vw;
 }
 
 .achievementsItem:nth-child(2) {
-    right: 60px;
-    top: 60px;
+    right: 4.166vw;
+    top: 4.166vw;
 }
 
 .achievementsItem:nth-child(3) {
-    top: 20px;
+    top: 1.388vw;
     transform: translateY(-50%);
 }
 
 .achievementsItem:nth-child(4) {
-    left: 60px;
-    top: 40px;
+    left: 4.166vw;
+    top: 2.777vw;
 }
 
 .achievementsItem:nth-child(5) {
-    left: 120px;
+    left: 8.333vw;
 }

@@ -11,12 +11,16 @@
 }
 
 .navbarLogo,
-.navbarLogo {
+.navbarLogoInner {
     height: 2.5vw;
 }
 
+.navbarLogo {
+    position: relative;
+}
+
 .navbarLogoInner {
-    height: 2.5vw;
+    position: absolute;
 }
 
 .navbarInner {
