@@ -6,20 +6,20 @@ import FeedBack from "../../components/feedBack/FeedBack.tsx";
 import Bonus from "../../components/bonus/Bonus.tsx";
 import GoUpBtn from "../../components/goUpBtn/GoUpBtn.tsx";
 import {FC} from "react";
-import styles from "./Shop.module.css"
+import styles from "./Shop.module.css";
 
 const Shop: FC = () => {
-    return (
-        <main className={styles.shop}>
-            <IntroSwiper />
-            <CatalogGrid middle />
-            <PopularSwiper />
-            <Achievements />
-            <FeedBack />
-            <Bonus />
-            <GoUpBtn />
-        </main>
-    );
+	return (
+		<main className={styles.shop}>
+			<IntroSwiper />
+			<CatalogGrid middle />
+			<PopularSwiper />
+			<Achievements />
+			<FeedBack />
+			<Bonus />
+			<GoUpBtn />
+		</main>
+	);
 };
 
 export default Shop;

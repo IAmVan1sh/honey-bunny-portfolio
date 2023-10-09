@@ -9,6 +9,8 @@
 }
 
 .orderFormContainer {
+	display: flex;
+	justify-content: space-between;
 	margin-top: 5.555vw;
 
 	& form {
@@ -20,7 +22,7 @@
 .orderFormTitle {
 	font-size: 2.5vw;
 	font-weight: 800;
-	line-height: 2.987;
+	line-height: 2.987vw;
 
 	white-space: nowrap;
 }
@@ -142,4 +144,12 @@
 .orderFormButton {
 	margin-top: 3.472vw;
 	width: 15.27vw;
+}
+
+// Basket
+.orderFormBasket {
+
+	& > section {
+		margin-top: 1.73vw;
+	}
 }

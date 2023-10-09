@@ -1,12 +1,13 @@
 import {DetailedHTMLProps, HTMLAttributes} from "react";
 
-interface ProductCardType {
+export interface ProductCardType {
     id: number;
     image: string;
     title: string;
     inStock: number;
     price: number;
     isWeight: number;
+    count?: number;
 }
 
 export interface ProductCardProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -14,13 +15,13 @@ export interface ProductCardProps extends DetailedHTMLProps<HTMLAttributes<HTMLD
 }
 
 export interface ProductDataBase {
-    'popular': ProductCardType[];
-    'marshmallow': ProductCardType[];
-    'zephyr': ProductCardType[];
-    'cookies': ProductCardType[];
-    'macaroons': ProductCardType[];
-    'birds-milk': ProductCardType[];
-    'jelly': ProductCardType[];
+    "popular": ProductCardType[];
+    "marshmallow": ProductCardType[];
+    "zephyr": ProductCardType[];
+    "cookies": ProductCardType[];
+    "macaroons": ProductCardType[];
+    "birds-milk": ProductCardType[];
+    "jelly": ProductCardType[];
 }
 
 export interface SetsType {
@@ -29,11 +30,11 @@ export interface SetsType {
 }
 
 export interface ProductTitlesBase {
-    'sets': string;
-    'marshmallow': string;
-    'zephyr': string;
-    'cookies': string;
-    'macaroons': string;
-    'birds-milk': string;
-    'jelly': string;
+    "sets": string;
+    "marshmallow": string;
+    "zephyr": string;
+    "cookies": string;
+    "macaroons": string;
+    "birds-milk": string;
+    "jelly": string;
 }

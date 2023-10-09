@@ -73,6 +73,7 @@
 
 .productCounterButtonImage {
     height: 1.666vw;
+    pointer-events: none;
 }
 
 .basketPrice {
