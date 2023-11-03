@@ -3,9 +3,15 @@ import {ProductCardProps} from "../../types/productCard.ts";
 import styles from "./ProductCard.module.css";
 import Button from "../button/Button.tsx";
 import useActions from "../../hooks/useActions.ts";
+import {useAppSelector} from "../../store/hooks.ts";
 
 const ProductCard: FC<ProductCardProps> = (props) => {
-	const { toggleBasket } = useActions();
+	const { toggleCart } = useActions();
+	const isExist = useAppSelector(state =>
+		state.basket.items.some(
+			item => item.product.id === props.productObj.id
+		)
+	);
 
 	return (
 		<section {...props} className={`${styles.productCard} ${props.className}`}>
@@ -34,7 +40,9 @@ const ProductCard: FC<ProductCardProps> = (props) => {
 				}
 			</h4>
 
-			<Button className={styles.productButton} onClick={() => toggleBasket({card: props.productObj})}>Додати в кошик</Button>
+			<Button className={styles.productButton} onClick={() => toggleCart({ product: props.productObj, quantity: 1 })}>
+				{isExist ? "Прибрати з кошику" : "Додати в кошик"}
+			</Button>
 
 		</section>
 	);

@@ -9,11 +9,12 @@ import {FC, Fragment} from "react";
 import OrderFormInputs from "../../types/orderFormTypes.ts";
 import {useAppSelector} from "../../store/hooks.ts";
 import BasketCard from "../../components/basketCard/BasketCard.tsx";
+import {formatToCurrency} from "../../utils/formatToCurrency.ts";
 
 const OrderForm: FC = () => {
-	
-	const basket = useAppSelector(state => state.basket);
-	
+	const basket = useAppSelector(state => state.basket.items);
+	const totalAmount = basket.reduce((total, currentItem) => total + currentItem.product.price * currentItem.quantity, 0);
+
 	const {
 		handleSubmit,
 		control
@@ -141,7 +142,7 @@ const OrderForm: FC = () => {
 
 						<p className={`${styles.orderFormSummaryData} ${styles.data1}`}>Печиво кокосове, Макаруни з ківі</p>
 						<p className={`${styles.orderFormSummaryData} ${styles.data2}`}>За тарифами перевізника (70 грн.)</p>
-						<p className={`${styles.orderFormSummaryData} ${styles.data3}`}>180 грн.</p>
+						<p className={`${styles.orderFormSummaryData} ${styles.data3}`}>{formatToCurrency(totalAmount)}</p>
 
 
 					</div>
@@ -154,8 +155,8 @@ const OrderForm: FC = () => {
 			<DevTool control={control}/>
 
 			<section className={styles.orderFormBasket}>
-				{basket.map(productCard =>
-					<BasketCard key={productCard.id} productObj={productCard}/>
+				{basket.map(cartItem =>
+					<BasketCard key={cartItem.product.id} productObj={cartItem.product}/>
 				)}
 			</section>
 

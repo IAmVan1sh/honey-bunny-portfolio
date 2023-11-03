@@ -1,54 +1,46 @@
-import {CaseReducer, createSlice} from "@reduxjs/toolkit";
+import {CaseReducer, createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {ProductCardType} from "../../types/productCard.ts";
 
-type InitialStateType = ProductCardType[]
-
-interface BasketActions {
-    type: string;
-    payload: {
-		card: ProductCardType;
-		count?: number;
-	}
+interface CartItem {
+	product: ProductCardType;
+	quantity: number;
 }
 
-const initialState: InitialStateType = [];
+interface changeQuantityAction {
+	id: number;
+	type: "minus" | "plus";
+}
 
-const toggleBasket: CaseReducer<InitialStateType, BasketActions> = (
-	state,
-	{ payload: { card }}
-) => {
+interface InitialStateType {
+	items: CartItem[]
+}
 
-	const isExistsIndex = state.findIndex(c => c.id === card.id);
-
-	if (isExistsIndex != -1) {
-		state.splice(isExistsIndex, 1);
-	} else {
-		state.push({ ...card, count: 1 });
-	}
-    
+const initialState: InitialStateType = {
+	items: []
 };
 
-const changeAmountInBasket: CaseReducer<InitialStateType, BasketActions> = (
-	state,
-	{payload: { card , count }}
-) => {
-	
-	const isExistsIndex = state.findIndex(c => c.id === card.id);
-	
-	if (isExistsIndex != -1 && count) {
-		if (1 < state[isExistsIndex].count! && state[isExistsIndex].count! < 99) {
-			state[isExistsIndex].count! += count;
-		}
+const toggleCart: CaseReducer<InitialStateType, PayloadAction<CartItem>> = (state, { payload: product }) => {
+	const isExist = state.items.find(item => item.product.id === product.product.id);
+	if (isExist) {
+		state.items = state.items.filter(
+			item => item !== isExist
+		);
+	} else {
+		state.items.push(product);
 	}
-	
+};
+
+const changeQuantity: CaseReducer<InitialStateType, PayloadAction<changeQuantityAction>> = (state, { payload: { id, type }}) => {
+	const item = state.items.find(item => item.product.id === id);
+	if (item) type === "plus" ? item.quantity++ : item.quantity--;
 };
 
 const BasketSlice = createSlice({
 	name: "basket",
 	initialState,
 	reducers: {
-		toggleBasket,
-		changeAmountInBasket,
+		toggleCart,
+		changeQuantity,
 	}
 });
 

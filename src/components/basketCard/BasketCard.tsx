@@ -8,15 +8,27 @@ import useActions from "../../hooks/useActions.ts";
 import {useAppSelector} from "../../store/hooks.ts";
 
 const BasketCard: FC<ProductCardProps> = (props) => {
-	const { toggleBasket, changeAmountInBasket } = useActions();
-	const basket = useAppSelector(state => state.basket);
-	const index = basket.findIndex(prod => prod.id === props.productObj.id);
-	
+	const { toggleCart, changeQuantity } = useActions();
+	const basket = useAppSelector(state => state.basket.items);
+	const itemIndex = basket.findIndex(item => item.product.id === props.productObj.id);
+
+	const buttonsCounterHandler = (action: "minus" | "plus") => {
+		if (action === "minus") {
+			if (basket[itemIndex].quantity - 1 > 0) {
+				changeQuantity({id: props.productObj.id, type: "minus"});
+			}
+		} else {	
+			if (basket[itemIndex].quantity + 1 < 100) {
+				changeQuantity({ id: props.productObj.id, type: "plus"});
+			}
+		}
+	};
+
 	return (
 		<section {...props} className={`${styles.productCard} ${props.className}`}>
 
-			<img alt="del" src={remove} className={styles.productRemove} onClick={() => toggleBasket({card: props.productObj})}/>
-			
+			<img alt="del" src={remove} className={styles.productRemove} onClick={() => toggleCart({ product: props.productObj, quantity: 1})}/>
+
 			<img
 				alt={""}
 				src={props.productObj.image}
@@ -39,13 +51,13 @@ const BasketCard: FC<ProductCardProps> = (props) => {
 
 				<section className={styles.productCounter}>
 
-					<button className={styles.productCounterButton} onClick={() => changeAmountInBasket({card: props.productObj, count: -1})}>
+					<button className={styles.productCounterButton} onClick={() => buttonsCounterHandler("minus")}>
 						<img alt="-" src={decrease} className={styles.productCounterButtonImage}/>
 					</button>
 
-					<span className={styles.productCount}>{basket[index].count}</span>
+					<span className={styles.productCount}>{basket[itemIndex].quantity}</span>
 
-					<button className={styles.productCounterButton} onClick={() => changeAmountInBasket({card: props.productObj, count: 1})}>
+					<button className={styles.productCounterButton} onClick={() => buttonsCounterHandler("plus")}>
 						<img alt="+" src={increase} className={styles.productCounterButtonImage}/>
 					</button>
 
