@@ -1,4 +1,4 @@
-import {FC, useEffect, useRef} from "react";
+import {FC} from "react";
 import styles from "./NavBar.module.scss";
 import global from "../../styles/global.module.css";
 import {NavLink} from "react-router-dom";
@@ -9,17 +9,9 @@ import {useAppSelector} from "../../store/hooks.ts";
 
 const NavBar: FC = () => {
 	const basket = useAppSelector(state => state.basket.items);
-	const headerRef = useRef<HTMLTableHeaderCellElement>(null!);
-
-	useEffect(() => {
-		document.addEventListener("scroll", () => {
-			headerRef.current.style.top = `${scrollY}px`;
-		});
-	}, []);
-
 
 	return (
-		<header className={styles.navbar} ref={headerRef}>
+		<header className={styles.navbar}>
 
 			<nav className={`${styles.navbarInner} ${global.container}`}>
 
