@@ -72,6 +72,7 @@ h1, h2, h3, h4, p {
   content: '';
   width: 1.041vw;
   height: 1.666vw;
+  background-size: 1.041vw 1.666vw;
 
   position: relative;
 }
@@ -94,6 +95,7 @@ h1, h2, h3, h4, p {
   height: 2.916vw;
   bottom: var(--swiper-button-animation-bottom);
   transform: scale(var(--swiper-button-animation-scale));
+  background-size: 2.430vw 2.916vw;
 
   transition: bottom 0.2s linear, transform 0.2s linear;
 }
@@ -106,4 +108,8 @@ h1, h2, h3, h4, p {
 .swiper-button-next::before {
   left: 0.8333vw;
   background-image: url("assets/NextBottom.svg");
+}
+
+html {
+  scroll-behavior: smooth;
 }

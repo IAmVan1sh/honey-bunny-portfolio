@@ -22,13 +22,13 @@ const NavBar: FC = () => {
 				<div className={styles.navbarLinks}>
 					<NavLink to={CATALOG_ROUTE} className={styles.navbarText}>Каталог товарів</NavLink>
 					<NavLink to={ORDER_FORM_ROUTE} className={styles.navbarText}>Доставка і оплата</NavLink>
-					<NavLink to="" className={styles.navbarText}>Корпоративні замовлення</NavLink>
-					<NavLink to="" className={styles.navbarText}>“Приготуй сам”</NavLink>
-					<NavLink to="" className={styles.navbarText}>Про нас</NavLink>
+					<NavLink to={SHOP_ROUTE} className={styles.navbarText}>Корпоративні замовлення</NavLink>
+					<NavLink to={SHOP_ROUTE} className={styles.navbarText}>“Приготуй сам”</NavLink>
+					<NavLink to={SHOP_ROUTE} className={styles.navbarText}>Про нас</NavLink>
 				</div>
 
 				<div className={styles.navbarIcons}>
-					<Input $hide $shift={true}/>
+					<Input isHidden shift/>
 					<NavLink to={BASKET_ROUTE} className={styles.navbarIconsImgLink}>
 						<img alt="basket" src={HeaderAssets.basket}/>
 						{basket.length > 0 &&

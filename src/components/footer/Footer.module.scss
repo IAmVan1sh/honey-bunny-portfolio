@@ -114,6 +114,17 @@
     max-width: 13.68vw;
 }
 
+.emailMessage {
+    color: #FFFFFF;
+
+    top: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    white-space: nowrap;
+    position: absolute;
+}
+
 /* Footer Copyright */
 
 .footerCopyright {
@@ -125,4 +136,40 @@
 
     margin-top: 3.958vw;
     text-decoration: none;
+}
+
+// Modal
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    top: 0;
+    left: 0;
+
+    z-index: 5;
+    position: fixed;
+
+    & section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFFFFF;
+
+        width: 50vw;
+        height: 50vh;
+        border-radius: 30px;
+
+        padding: 0 8%;
+
+        & h1 {
+            color: #FF8EB4;
+        }
+
+    }
 }

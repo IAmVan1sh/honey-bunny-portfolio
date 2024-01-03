@@ -1,10 +1,11 @@
-import {DetailedHTMLProps, InputHTMLAttributes} from "react";
+import React, {DetailedHTMLProps, InputHTMLAttributes} from "react";
 
 export interface InputProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>{
-    $variant?: "primary" | "transparent" | "warning" | "checked" | "wrong" | "unchecked" | "next" | "transparent-next";
-    $hide?: boolean;
-    $shift?: boolean;
-    $noImage?: boolean;
+    variant?: "primary" | "transparent" | "warning" | "checked" | "wrong" | "unchecked" | "next" | "transparent-next" | "transparent-checked";
+    isHidden?: boolean;
+    shift?: boolean;
+    noImage?: boolean;
+    isAlreadyReceives?: boolean;
     buttonPicture?:
         "searchGray" |
         "searchWhite" |
@@ -14,4 +15,5 @@ export interface InputProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLIn
         "wrong" |
         "checked" |
         "unchecked";
+    buttonClick?: (arg: React.MouseEvent<HTMLImageElement>) => void;
 }

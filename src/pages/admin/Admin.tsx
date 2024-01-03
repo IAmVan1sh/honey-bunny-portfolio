@@ -1,11 +1,11 @@
 import {FC} from "react";
 
 const Admin: FC = () => {
-    return (
-        <main>
+	return (
+		<main>
             ADMIN
-        </main>
-    );
+		</main>
+	);
 };
 
 export default Admin;

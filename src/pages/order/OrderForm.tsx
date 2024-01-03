@@ -45,12 +45,16 @@ const OrderForm: FC = () => {
 
 					<h2 className={`${styles.orderFormChildTitle} ${global.pinkBubble}`}>Ваші контактні дані<span style={{color: "#F77474"}}>*</span></h2>
 
-					{orderFormConfig.contacts.map(props =>
+					{orderFormConfig.contacts.map(({
+						bigMarginTop,
+						rules,
+						...props
+					}) =>
 						<Fragment key={props.name}>
 
 							<div className={[
 								styles.orderFormInputContainer,
-								(props.$bigMarginTop || ""),
+								(bigMarginTop || ""),
 							].join(" ")}>
 
 								<label htmlFor={props.id} className={styles.orderFormLabel}>{props.label}</label>
@@ -65,7 +69,7 @@ const OrderForm: FC = () => {
 											className={`${styles.orderFormInput} ${props.className}`}
 										/>
 									)}
-									rules={props.$rules}
+									rules={rules}
 								/>
 
 							</div>
@@ -79,17 +83,23 @@ const OrderForm: FC = () => {
 
 					<h2 className={`${styles.orderFormChildTitle} ${global.pinkBubble}`}>Доставка<span style={{color: "#F77474"}}>*</span></h2>
 
-					{orderFormConfig.delivery.map(({$rules,...props}, index) =>
+					{orderFormConfig.delivery.map(({
+						subtitle,
+						bigMarginTop,
+						rules,
+						...props},
+					index
+					) =>
 						<Fragment key={props.name + index}>
 
-							{props.$subtitle &&
-                                <h4 className={styles.orderFormChildSubtitle}>{props.$subtitle}</h4>
+							{subtitle &&
+                                <h4 className={styles.orderFormChildSubtitle}>{subtitle}</h4>
 							}
 
 							<div className={[
 								styles.orderFormInputContainer,
 								((props.type === "radio" || props.type === "checkbox") && styles.flexReverse),
-								(props.$bigMarginTop || ""),
+								(bigMarginTop || ""),
 							].join(" ")}
 							style={props.type === "textarea" && {marginTop: "4.861vw"} || {}}
 							>
@@ -120,7 +130,7 @@ const OrderForm: FC = () => {
 												className={`${styles.orderFormInput} ${props.className}`}
 											/>
 									}
-									rules={$rules}
+									rules={rules}
 								/>
 
 							</div>
@@ -149,7 +159,7 @@ const OrderForm: FC = () => {
 
 				</section>
 
-				<Button type="submit" className={styles.orderFormButton}>Підтвердити</Button>
+				<Button type="submit" reverseAnimation className={styles.orderFormButton}>Підтвердити</Button>
 
 			</form>
 			<DevTool control={control}/>

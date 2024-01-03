@@ -3,21 +3,33 @@
     color: #FFFFFF;
     background-color: #FF8EB4;
 
-    font-size: 1.25vw;
+    font-size: 1.23vw;
     font-weight: 800;
     line-height: 1.458vw;
 
     width: 100%;
-    border: 0;
+    border: 2px solid #FF8EB4;
     border-radius: 1.041vw;
 
     padding: 0.972vw 1.2vw;
-    transition: transform 0.2s linear;
+    /*transition: transform 0.2s linear;*/
 }
 
 .generalButton:hover {
-    transform: scale(1.02);
+    background: #FFFFFF;
+    color: #FF8EB4;
 }
 
-.generalButton:active {
+.buttonReverse {
+    background: #FFFFFF;
+    color: #FF8EB4;
+}
+
+.buttonReverse:hover {
+    color: #FFFFFF;
+    background-color: #FF8EB4;
+}
+
+.transparent-button {
+    background-color: #FFFFFF;
 }

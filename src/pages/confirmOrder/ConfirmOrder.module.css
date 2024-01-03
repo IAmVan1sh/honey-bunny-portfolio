@@ -68,7 +68,7 @@
 }
 
 .confirmOrderButton {
-    width: 15.27vw;
+    max-width: 15.27vw;
 
     margin-top: 2.083vw;
 }

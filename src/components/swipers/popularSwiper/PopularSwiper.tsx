@@ -1,5 +1,5 @@
 import {FC} from "react";
-import styles from "./PopularSwiper.module.css";
+import styles from "./PopularSwiper.module.scss";
 import {Navigation} from "swiper/modules";
 import productData from "../../../assets/tastes/productCardObj.ts";
 import ProductCard from "../../productCard/ProductCard.tsx";

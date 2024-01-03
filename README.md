@@ -1,12 +1,12 @@
-Now this project on the pause, because I'm developing design-less website where I practise new technologies (Backend as well).
+Now this project is suspended because I am developing a website without a design, where I practice new technologies (backend as well).
 You can check its repository here - https://github.com/IAmVan1sh/react-rtk-trainy-project.
-Also its has been hosted, so you don't need to build it. Go to the - https://react-rtk-trainy-project.vercel.app/
+Also it has been hosted, so you don't need to build it. Go to the - https://react-rtk-trainy-project.vercel.app/
 
 # Honey Bunny - my portfolio
 
 
 Hello, My name is Dmytro. This project is my protfolio now,  
-here you can see wich technologies I am studying now and how I use it.
+here you can see wich technologies I am studying/studied and how I use it.
 
 ### In this project was used:
 
