@@ -81,6 +81,8 @@ const Footer: FC = () => {
 								value={value}
 								onChange={event => setValue(event.target.value)}
 								buttonClick={() => registerUser({ email: value }).then(value => {
+									// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+									// @ts-ignore
 									if (value.data) {
 										setModal(true);
 									}
@@ -90,7 +92,11 @@ const Footer: FC = () => {
 								<p className={styles.emailMessage}>email registered but not validated!</p>
 								:
 								error ?
-									<p className={styles.emailMessage}>{error.data?.message}</p>
+									<p className={styles.emailMessage}>{
+										// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+										// @ts-ignore
+										error.data.message
+									}</p>
 									:
 									<p className={styles.emailMessage}></p>
 							}

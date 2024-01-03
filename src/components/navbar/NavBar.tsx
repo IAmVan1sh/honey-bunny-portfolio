@@ -2,7 +2,7 @@ import {FC} from "react";
 import styles from "./NavBar.module.scss";
 import global from "../../styles/global.module.css";
 import {NavLink} from "react-router-dom";
-import {BASKET_ROUTE, CATALOG_ROUTE, ORDER_FORM_ROUTE, SHOP_ROUTE} from "../../utils/consts.ts";
+import {CATALOG_ROUTE, ORDER_FORM_ROUTE, SHOP_ROUTE} from "../../utils/consts.ts";
 import HeaderAssets from "../../assets/header/HeaderAssets.ts";
 import Input from "../input/Input.tsx";
 import {useAppSelector} from "../../store/hooks.ts";
@@ -29,7 +29,7 @@ const NavBar: FC = () => {
 
 				<div className={styles.navbarIcons}>
 					<Input isHidden shift/>
-					<NavLink to={BASKET_ROUTE} className={styles.navbarIconsImgLink}>
+					<NavLink to={ORDER_FORM_ROUTE} className={styles.navbarIconsImgLink}>
 						<img alt="basket" src={HeaderAssets.basket}/>
 						{basket.length > 0 &&
                             <span>{basket.length}</span>
