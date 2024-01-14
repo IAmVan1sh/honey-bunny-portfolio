@@ -1,5 +1,5 @@
 export const SHOP_ROUTE: string = "/";
-export const ADMIN_ROUTE: string = "/admin";
+export const ADMIN_ROUTE: string = "/";
 export const BASKET_ROUTE: string = "/basket";
 export const CATALOG_ROUTE: string = "/catalog";
 export const ORDER_FORM_ROUTE: string = "/order-form";
