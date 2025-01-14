@@ -1,3 +1,5 @@
+## The development of this portfolio website was halted due to poor design and the complexity of coding it, making it not worth the effort.
+
 Now this project is suspended because I am developing a website without a design, where I practice new technologies (backend as well).
 You can check its repository here - https://github.com/IAmVan1sh/react-rtk-trainy-project.
 Also it has been hosted, so you don't need to build it. Go to the - https://react-rtk-trainy-project.vercel.app/
